@@ -1,0 +1,20 @@
+name: BossBarMessage
+version: '${project.version}'
+main: io.github.endergamerhun.bossbarmessage.BossBarMessage
+api-version: 1.18
+
+permissions:
+  bossbarmessage.broadcast:
+    description: Broadcast on the BossBar
+  bossbarmessage.message:
+    description: Show bossbar to a specific player
+  bossbarmessage.admin:
+    description: Admin commands
+
+commands:
+  bbbroadcast:
+    permission: bossbarmessage.broadcast
+  bbsend:
+    permission: bossbarmessage.message
+  bossbarmessage:
+    permission: bossbarmessage.admin
