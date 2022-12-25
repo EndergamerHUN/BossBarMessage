@@ -26,7 +26,7 @@ public class TimedBossBar extends BukkitRunnable {
         this.length = length;
         this.bar = bar;
 
-        this.runTaskTimer(Util.getInstance(), 1, 1);
+        this.runTaskTimer(Util.getInstance(), 0, 1);
     }
 
     @Override

@@ -6,7 +6,7 @@
 
     <groupId>io.github.endergamerhun</groupId>
     <artifactId>bossbarmessage</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>BossbarMessage</name>
@@ -39,7 +39,6 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <outputFile>${user.home}/IdeaProjects/plugins/_compiled/BossBarMessage.jar</outputFile>
                         </configuration>
                     </execution>
                 </executions>
