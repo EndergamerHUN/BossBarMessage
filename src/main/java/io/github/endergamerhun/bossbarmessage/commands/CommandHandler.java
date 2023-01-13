@@ -1,6 +1,7 @@
 package io.github.endergamerhun.bossbarmessage.commands;
 
 import io.github.endergamerhun.bossbarmessage.BossBarMessage;
+import io.github.endergamerhun.bossbarmessage.bossbar.BossBarManager;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.command.Command;
@@ -41,7 +42,7 @@ public class CommandHandler implements TabExecutor {
             return true;
         }
         String message = String.join(" ", Arrays.copyOfRange(args, 3, args.length));
-        BossBarMessage.INSTANCE.getMessageSender().message(message, length*20, color, style);
+        BossBarManager.message(message, length*20, color, style);
         return true;
     }
 

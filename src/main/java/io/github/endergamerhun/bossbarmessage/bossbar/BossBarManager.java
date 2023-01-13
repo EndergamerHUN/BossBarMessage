@@ -11,21 +11,21 @@ import org.bukkit.entity.Player;
 
 public class BossBarManager {
 
-    public void message(String message, int ticks) {
+    public static void message(String message, int ticks) {
         message(message, ticks, null);
     }
-    public void message(String message, int ticks, Iterable<? extends Player> recipients) {
+    public static void message(String message, int ticks, Iterable<? extends Player> recipients) {
         message(message, ticks, recipients, BarColor.RED, BarStyle.SOLID);
     }
-    public void message(String message, int ticks, BarColor color, BarStyle style) {
+    public static void message(String message, int ticks, BarColor color, BarStyle style) {
         message(message, ticks, null, color, style);
     }
-    public void message(String message, int ticks, Iterable<? extends Player> recipients, BarColor color, BarStyle style) {
+    public static void message(String message, int ticks, Iterable<? extends Player> recipients, BarColor color, BarStyle style) {
         KeyedBossBar bar = createBossBar(message, color, style);
         new TimedBossBar(bar, ticks*50L, recipients);
     }
 
-    private KeyedBossBar createBossBar(String title, BarColor color, BarStyle style) {
+    private static KeyedBossBar createBossBar(String title, BarColor color, BarStyle style) {
         BossBarMessage plugin = Util.getInstance();
         NamespacedKey key;
         KeyedBossBar bar;
